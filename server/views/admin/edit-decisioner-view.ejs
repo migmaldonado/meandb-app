@@ -1,0 +1,22 @@
+<h2>Edit <%= decisioner.name %></h2>
+
+<form action="/decisioners/edit/<%= decisioner._id %>" method="post">
+
+  <label for="edit-name">Name</label>
+  <br>
+  <input type="text" name="newName" value="<%= decisioner.name %>">
+  <br>
+
+  <label for="edit-email">Email</label>
+  <br>
+  <input type="text" name="newEmail" value="<%= decisioner.email %>">
+  <br>
+
+  <label for="edit-is-admin">Admin Status</label>
+  <br>
+  <input type="boolean" name="newIsAdmin" value="<%= decisioner.isAdmin %>">
+  <br>
+
+
+  <button type="submit">Save Changes</button>
+</form>

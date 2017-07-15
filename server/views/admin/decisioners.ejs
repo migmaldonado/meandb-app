@@ -1,0 +1,21 @@
+<h3> Decisioners in this project
+</h3>
+
+<ul>
+  <% decisioners.forEach((oneUser) => { %>
+    <li>
+      <h3> <%= oneUser.name %> </h3> <a href="/decisioners/edit/<%= oneUser._id %>">   [Edit]</a>
+      <p> <%= oneUser.email %> </p>
+      <p> <%= oneUser.isAdmin %> </p>
+
+      <form action="/decisioners/delete/<%= oneUser._id %>" method="post">
+        <button type="submit">Delete</button>
+      </form>
+
+    </li>
+  <% }) %>
+</ul>
+
+<a href="/dashboard">
+  Back to Dashboard
+</a>

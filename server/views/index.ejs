@@ -1,0 +1,18 @@
+<!-- <h1><%= title %></h1> -->
+
+<!-- <p>Welcome to <%= title %></p> -->
+<% if (!isUserLoggedIn) { %>
+  <p> A data visualization Web App for decision makers </p>
+<% } %>
+
+<nav>
+  <ul>
+    <% if (!isUserLoggedIn) { %>
+    <li> <a href="/signup"> Sign Up </a> </li>
+    <li> <a href="/login"> Log In </a> </li>
+    <% } else { %>
+    <li> <a href="/decisioners"> See Dashboard </a> </li>
+    <li> <a href="/logout"> Log Out </a> </li>
+    <% } %>
+  </ul>
+</nav>
